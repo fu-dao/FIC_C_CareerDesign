@@ -22,6 +22,7 @@ insert into hood_menu values(null, 'フレンチトースト', 250);
 
 -- テーブル名　drink_menu
 -- 左からID、商品名、M値段、S、L
+-- S価格はhtmlで「-」とかつけといてください
 create table drink_menu{
     id int auto_increment primary key,
     name varchar(200) not null,
@@ -30,19 +31,19 @@ create table drink_menu{
     price_L int not null
 }
 
-insert into drink_menu values(null, 'アイスレモンティー', 400, -50, 50)
-insert into drink_menu values(null, 'アイスミルクティー', 400, -50, 50)
-insert into drink_menu values(null, 'アイスティー', 400, -50, 50)
-insert into drink_menu values(null, 'レモンティー', 400, -50, 50)
-insert into drink_menu values(null, 'ミルクティー', 400, -50, 50)
-insert into drink_menu values(null, '紅茶', 400, -50, 50)
-insert into drink_menu values(null, 'アイスコーヒー', 350, -50, 50)
-insert into drink_menu values(null, 'ホットコーヒー', 350, -50, 50)
-insert into drink_menu values(null, 'アイスラテ', 400, -50, 50)
-insert into drink_menu values(null, 'ラテ', 400, -50, 50)
-insert into drink_menu values(null, 'アイスキャラメルラテ', 450, -50, 50)
-insert into drink_menu values(null, 'キャラメルラテ', 450, -50, 50)
-insert into drink_menu values(null, 'アイスココア', 450, -50, 50)
-insert into drink_menu values(null, 'ココア', 450, -50, 50)
-insert into drink_menu values(null, 'ホットチョコレート', 450, -50, 50)
-insert into drink_menu values(null, 'オレンジジュース', 300, -50, 50)
+insert into drink_menu values(null, 'アイスレモンティー', 400, 50, 50)
+insert into drink_menu values(null, 'アイスミルクティー', 400, 50, 50)
+insert into drink_menu values(null, 'アイスティー', 400, 50, 50)
+insert into drink_menu values(null, 'レモンティー', 400, 50, 50)
+insert into drink_menu values(null, 'ミルクティー', 400, 50, 50)
+insert into drink_menu values(null, '紅茶', 400, 50, 50)
+insert into drink_menu values(null, 'アイスコーヒー', 350, 50, 50)
+insert into drink_menu values(null, 'ホットコーヒー', 350, 50, 50)
+insert into drink_menu values(null, 'アイスラテ', 400, 50, 50)
+insert into drink_menu values(null, 'ラテ', 400, 50, 50)
+insert into drink_menu values(null, 'アイスキャラメルラテ', 450, 50, 50)
+insert into drink_menu values(null, 'キャラメルラテ', 450, 50, 50)
+insert into drink_menu values(null, 'アイスココア', 450, 50, 50)
+insert into drink_menu values(null, 'ココア', 450, 50, 50)
+insert into drink_menu values(null, 'ホットチョコレート', 450, 50, 50)
+insert into drink_menu values(null, 'オレンジジュース', 300, 50, 50)
