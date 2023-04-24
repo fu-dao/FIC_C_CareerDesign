@@ -6,7 +6,7 @@ use shitamichi;
 
 -- テーブル名　hood_menu
 create table hood_menu(
-    id int auto_increment primary key,  --ID（null)
+    id int auto_increment primary key,  --ID（null）
     name varchar(200) not null,         --商品名（200文字まで）
     price int not null                  --値段
 );
@@ -21,13 +21,13 @@ insert into hood_menu values(null, 'フレンチトースト', 250);
 
 -- テーブル名　drink_menu
 -- S価格はhtmlで「-」とかつけといてください
-create table drink_menu{
+create table drink_menu(
     id int auto_increment primary key,  --ID（null）
     name varchar(200) not null,         --商品名（200文字まで）
     price_M int not null,               --M価格
     price_S int not null,               --S価格（-xx）
     price_L int not null                --L価格（+xx）
-}
+);
 
 insert into drink_menu values(null, 'アイスレモンティー', 400, 50, 50)
 insert into drink_menu values(null, 'アイスミルクティー', 400, 50, 50)
@@ -45,3 +45,11 @@ insert into drink_menu values(null, 'アイスココア', 450, 50, 50)
 insert into drink_menu values(null, 'ココア', 450, 50, 50)
 insert into drink_menu values(null, 'ホットチョコレート', 450, 50, 50)
 insert into drink_menu values(null, 'オレンジジュース', 300, 50, 50)
+
+-- テーブル名 food_menu_image
+create table food_menu_image(
+    id int auto_increment primary key,  --ID（null）
+    img longblob not null,              --画像データ（4GB）
+    name varchar(200), not null         --画像名
+);
+-- ENGINE = InnoDB;とかついてたけどよく分かりません🙃
