@@ -8,7 +8,7 @@ use shitamichi;
 create table hood_menu(
     id int auto_increment primary key,  -- ID（null）
     name varchar(200) not null,         -- 商品名（200文字まで）
-    price int not null                  -- 値段
+    price int not null,                 -- 値段
     text varchar(32767) not null        -- 説明（32767文字まで）
 );
 insert into hood_menu values(null, 'クッキー', 120, 'test');
@@ -34,7 +34,7 @@ create table drink_menu(
     name varchar(200) not null,         -- 商品名（200文字まで）
     price_M int not null,               -- M価格
     price_S int not null,               -- S価格（-xx）
-    price_L int not null                -- L価格（+xx）
+    price_L int not null,               -- L価格（+xx）
     text varchar(32767) not null        -- 説明（32767文字まで）
 );
 insert into drink_menu values(null, 'アイスレモンティー', 400, 50, 50, 'test');
@@ -66,7 +66,7 @@ create table drink_menu_img(
 -- 後で作る
 create table table_set(
     id int auto_increment primary key,  -- ID（null）
-    reserve int not null,              -- 予約されているかを判別する(0：予約なし、1：予約あり)
+    reserve int not null                -- 予約されているかを判別する(0：予約なし、1：予約あり)
 );
 -- 一人席５個
 insert into table_set values(null, 0);
