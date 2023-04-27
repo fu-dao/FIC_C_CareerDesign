@@ -34,8 +34,6 @@ create table drink_menu(
     price_M int not null,               -- M価格
     price_S int not null,               -- S価格（-xx）
     price_L int not null                -- L価格（+xx）
-    img longblob not null,              -- 画像データ（4GB）
-    name varchar(200) not null          -- 画像名
 );
 insert into drink_menu values(null, 'アイスレモンティー', 400, 50, 50);
 insert into drink_menu values(null, 'アイスミルクティー', 400, 50, 50);
