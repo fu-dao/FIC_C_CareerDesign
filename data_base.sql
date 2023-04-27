@@ -66,7 +66,23 @@ create table drink_menu_img(
 -- 後で作る
 create table table_set(
     id int auto_increment primary key,  -- ID（null）
+    reserve int not null,              -- 予約されているかを判別する(0：予約なし、1：予約あり)
 );
+-- 一人席５個
+insert into table_set values(null, 0);
+insert into table_set values(null, 0);
+insert into table_set values(null, 0);
+insert into table_set values(null, 0);
+insert into table_set values(null, 0);
+-- 二人席３個
+insert into table_set values(null, 0);
+insert into table_set values(null, 0);
+insert into table_set values(null, 0);
+-- 四人席４個
+insert into table_set values(null, 0);
+insert into table_set values(null, 0);
+insert into table_set values(null, 0);
+insert into table_set values(null, 0);
 
 -- テーブル名 news
 create table news(
