@@ -9,14 +9,15 @@ create table hood_menu(
     id int auto_increment primary key,  -- ID（null）
     name varchar(200) not null,         -- 商品名（200文字まで）
     price int not null                  -- 値段
+    text varchar(32767) not null        -- 説明（32767文字まで）
 );
-insert into hood_menu values(null, 'クッキー', 120);
-insert into hood_menu values(null, 'クロワッサン',200);
-insert into hood_menu values(null, 'タルト', 400);
-insert into hood_menu values(null, 'ケーキ', 400);
-insert into hood_menu values(null, 'サンドイッチ', 300);
-insert into hood_menu values(null, 'パンケーキ', 500);
-insert into hood_menu values(null, 'フレンチトースト', 250);
+insert into hood_menu values(null, 'クッキー', 120, 'test');
+insert into hood_menu values(null, 'クロワッサン',200, 'test');
+insert into hood_menu values(null, 'タルト', 400, 'test');
+insert into hood_menu values(null, 'ケーキ', 400, 'test');
+insert into hood_menu values(null, 'サンドイッチ', 300, 'test');
+insert into hood_menu values(null, 'パンケーキ', 500, 'test');
+insert into hood_menu values(null, 'フレンチトースト', 250, 'test');
 
 -- テーブル名　hood_menu_img
 create table hood_menu_img(
@@ -34,23 +35,24 @@ create table drink_menu(
     price_M int not null,               -- M価格
     price_S int not null,               -- S価格（-xx）
     price_L int not null                -- L価格（+xx）
+    text varchar(32767) not null        -- 説明（32767文字まで）
 );
-insert into drink_menu values(null, 'アイスレモンティー', 400, 50, 50);
-insert into drink_menu values(null, 'アイスミルクティー', 400, 50, 50);
-insert into drink_menu values(null, 'アイスティー', 400, 50, 50);
-insert into drink_menu values(null, 'レモンティー', 400, 50, 50);
-insert into drink_menu values(null, 'ミルクティー', 400, 50, 50);
-insert into drink_menu values(null, '紅茶', 400, 50, 50);
-insert into drink_menu values(null, 'アイスコーヒー', 350, 50, 50);
-insert into drink_menu values(null, 'ホットコーヒー', 350, 50, 50);
-insert into drink_menu values(null, 'アイスラテ', 400, 50, 50);
-insert into drink_menu values(null, 'ラテ', 400, 50, 50);
-insert into drink_menu values(null, 'アイスキャラメルラテ', 450, 50, 50);
-insert into drink_menu values(null, 'キャラメルラテ', 450, 50, 50);
-insert into drink_menu values(null, 'アイスココア', 450, 50, 50);
-insert into drink_menu values(null, 'ココア', 450, 50, 50);
-insert into drink_menu values(null, 'ホットチョコレート', 450, 50, 50);
-insert into drink_menu values(null, 'オレンジジュース', 300, 50, 50);
+insert into drink_menu values(null, 'アイスレモンティー', 400, 50, 50, 'test');
+insert into drink_menu values(null, 'アイスミルクティー', 400, 50, 50, 'test');
+insert into drink_menu values(null, 'アイスティー', 400, 50, 50, 'test');
+insert into drink_menu values(null, 'レモンティー', 400, 50, 50, 'test');
+insert into drink_menu values(null, 'ミルクティー', 400, 50, 50, 'test');
+insert into drink_menu values(null, '紅茶', 400, 50, 50, 'test');
+insert into drink_menu values(null, 'アイスコーヒー', 350, 50, 50, 'test');
+insert into drink_menu values(null, 'ホットコーヒー', 350, 50, 50, 'test');
+insert into drink_menu values(null, 'アイスラテ', 400, 50, 50, 'test');
+insert into drink_menu values(null, 'ラテ', 400, 50, 50, 'test');
+insert into drink_menu values(null, 'アイスキャラメルラテ', 450, 50, 50, 'test');
+insert into drink_menu values(null, 'キャラメルラテ', 450, 50, 50, 'test');
+insert into drink_menu values(null, 'アイスココア', 450, 50, 50, 'test');
+insert into drink_menu values(null, 'ココア', 450, 50, 50, 'test');
+insert into drink_menu values(null, 'ホットチョコレート', 450, 50, 50, 'test');
+insert into drink_menu values(null, 'オレンジジュース', 300, 50, 50, 'test');
 
 -- テーブル名　drink_menu_img
 create table drink_menu_img(
