@@ -69,4 +69,5 @@ create table news(
 create table user(
     id int auto_increment primary key,  -- ID（null）
     name varchar(200) not null,         -- ユーザー名
+    mail varchar(200) not null,         -- メールアドレス
 )
