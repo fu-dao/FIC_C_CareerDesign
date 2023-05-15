@@ -1,8 +1,8 @@
--- データベース名：shitamichi_bakery、ユーザー及びパスワードは教科書通り
-drop database if exists shitamichi_bakery;
-create database shitamichi_bakery default character set utf8 collate utf8_general_ci;
-grant all on shitamichi.* to 'staff'@'localhost' identified by 'password';
-use shitamichi;
+-- データベース名：bakery、ユーザー及びパスワードは教科書通り
+drop database if exists bakery;
+create database bakery default character set utf8 collate utf8_general_ci;
+grant all on bakery.* to 'staff'@'localhost' identified by 'password';
+use bakery;
 
 -- テーブル名　food_menu
 create table food_menu(
@@ -66,8 +66,8 @@ create table news(
 );
 
 -- テーブル名　user
-create table user(
+create table user_table(
     id int auto_increment primary key,  -- ID（null）
     name varchar(200) not null,         -- ユーザー名
-    mail varchar(200) not null          -- メールアドレス
+    mail varchar(200) not null         -- メールアドレス
 );
