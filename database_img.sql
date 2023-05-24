@@ -65,7 +65,7 @@ create table news(
     imgpass varchar(200) not null       -- 画像パス
 );
 
--- テーブル名　user
+-- テーブル名　user_table
 create table user_table(
     id int auto_increment primary key,  -- ID（null）
     name varchar(200) not null,         -- ユーザー名
