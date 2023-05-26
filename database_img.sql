@@ -28,6 +28,7 @@ create table drink_menu(
 -- 一人席用テーブル
 create table table_set_1(
     id int auto_increment primary key,  -- ID（null）
+    tbl_nam int not null,               -- 席番号
     tbl_data int not null,              -- 日付
     tbl_time int not null,              -- 時間
     name varchar(200) not null         -- 予約者の名前
@@ -37,6 +38,7 @@ create table table_set_1(
 -- 二人席用テーブル
 create table table_set_2(
     id int auto_increment primary key,  -- ID（null）
+    tbl_nam int not null,               -- 席番号
     tbl_data int not null,              -- 日付
     tbl_time int not null,              -- 時間
     name varchar(200) not null         -- 予約者の名前
@@ -46,6 +48,7 @@ create table table_set_2(
 -- ４人席用テーブル
 create table table_set_4(
     id int auto_increment primary key,  -- ID（null）
+    tbl_nam int not null,               -- 席番号
     tbl_data int not null,              -- 日付
     tbl_time int not null,              -- 時間
     name varchar(200) not null         -- 予約者の名前
