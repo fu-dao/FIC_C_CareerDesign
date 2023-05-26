@@ -29,8 +29,8 @@ create table drink_menu(
 create table table_set_1(
     id int auto_increment primary key,  -- ID（null）
     tbl_data int not null,              -- 日付
-    tbl_time int not null.              -- 時間
-    name varchar(200) not null,         -- 予約者の名前
+    tbl_time int not null,              -- 時間
+    name varchar(200) not null         -- 予約者の名前
 );
 
 -- テーブル名　table_set_2
@@ -38,8 +38,8 @@ create table table_set_1(
 create table table_set_2(
     id int auto_increment primary key,  -- ID（null）
     tbl_data int not null,              -- 日付
-    tbl_time int not null.              -- 時間
-    name varchar(200) not null,         -- 予約者の名前
+    tbl_time int not null,              -- 時間
+    name varchar(200) not null         -- 予約者の名前
 );
 
 -- テーブル名　teble_set_4
@@ -47,8 +47,8 @@ create table table_set_2(
 create table table_set_4(
     id int auto_increment primary key,  -- ID（null）
     tbl_data int not null,              -- 日付
-    tbl_time int not null.              -- 時間
-    name varchar(200) not null,         -- 予約者の名前
+    tbl_time int not null,              -- 時間
+    name varchar(200) not null         -- 予約者の名前
 );
 
 -- テーブル名 news
