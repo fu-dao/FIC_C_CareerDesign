@@ -28,33 +28,28 @@ create table drink_menu(
 -- 一人席用テーブル
 create table table_set_1(
     id int auto_increment primary key,  -- ID（null）
-    reserve int not null                -- 予約されているかを判別する(0：予約なし、1：予約あり)
+    tbl_data int not null,              -- 日付
+    tbl_time int not null.              -- 時間
+    name varchar(200) not null,         -- 予約者の名前
 );
-insert into table_set_1 values(null, 0);
-insert into table_set_1 values(null, 0);
-insert into table_set_1 values(null, 0);
-insert into table_set_1 values(null, 0);
-insert into table_set_1 values(null, 0);
+
 -- テーブル名　table_set_2
 -- 二人席用テーブル
 create table table_set_2(
     id int auto_increment primary key,  -- ID（null）
-    reserve int not null                -- 予約されているかを判別する(0：予約なし、1：予約あり)
+    tbl_data int not null,              -- 日付
+    tbl_time int not null.              -- 時間
+    name varchar(200) not null,         -- 予約者の名前
 );
-insert into table_set_2 values(null, 0);
-insert into table_set_2 values(null, 0);
-insert into table_set_2 values(null, 0);
 
 -- テーブル名　teble_set_4
 -- ４人席用テーブル
 create table table_set_4(
     id int auto_increment primary key,  -- ID（null）
-    reserve int not null                -- 予約されているかを判別する(0：予約なし、1：予約あり)
+    tbl_data int not null,              -- 日付
+    tbl_time int not null.              -- 時間
+    name varchar(200) not null,         -- 予約者の名前
 );
-insert into table_set_4 values(null, 0);
-insert into table_set_4 values(null, 0);
-insert into table_set_4 values(null, 0);
-insert into table_set_4 values(null, 0);
 
 -- テーブル名 news
 create table news(
