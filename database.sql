@@ -82,24 +82,35 @@ create table purchaser(
     mail varchar(200) not null                      -- メールアドレス
 );
 
+-- テーブル名　date_tbl
+create table date_tbl(
+    date_id int auto_increment primary key,    -- ID
+    date int not null                          -- 取りに行く時間
+);
+
 -- テーブル名　food_reserve_tbl
 create table food_reserve_tbl(
     food_id int,                        -- フードメニューのID
     purchaser_id int,                   -- 購入者テーブルのID
+    date_id int,                        -- 受取時間テーブルのID
     -- 複合キー
-    PRIMARY KEY(food_id, purchaser_id),
+    PRIMARY KEY(food_id, purchaser_id, date_id),
     -- 以下外部キー
-    FOREIGN KEY (food_id) REFERENCES food_menu(food_id) on delete cascade,
-    FOREIGN KEY (purchaser_id) REFERENCES purchaser(purchaser_id)
+    FOREIGN KEY (food_id) REFERENCES food_menu(food_id),
+    FOREIGN KEY (purchaser_id) REFERENCES purchaser(purchaser_id),
+    FOREIGN KEY (date_id) REFERENCES date_tbl(date_id)
 );
 
 -- テーブル名　drink_reserve_tbl
 create table drink_reserve_tbl(
-    drink_id int,                       -- ドリンクテーブルのID
+    drink_id int,                       -- ドリンクメニューのID
     purchaser_id int,                   -- 購入者テーブルのID
+    date_id int,                        -- 受取時間テーブルのID
+
     -- 複合キー
-    PRIMARY KEY(drink_id, purchaser_id),
+    PRIMARY KEY(drink_id, purchaser_id, date_id),
     -- 以下外部キー
-    FOREIGN KEY (drink_id) REFERENCES drink_menu(drink_id) on delete cascade,
-    FOREIGN KEY (purchaser_id) REFERENCES purchaser(purchaser_id)
+    FOREIGN KEY (drink_id) REFERENCES drink_menu(drink_id),
+    FOREIGN KEY (purchaser_id) REFERENCES purchaser(purchaser_id),
+    FOREIGN KEY (date_id) REFERENCES date_tbl(date_id)
 );
