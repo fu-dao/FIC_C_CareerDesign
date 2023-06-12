@@ -68,13 +68,6 @@ create table user_table(
     mail varchar(200) not null          -- メールアドレス
 );
 
--- テーブル名　user_reserve
-create table user_reserve(
-    id int auto_increment primary key,  -- ID（null）
-    name varchar(200) not null,         -- 名前
-    mail varchar(200) not null          -- メールアドレス
-);
-
 -- テーブル名　purchaser
 create table purchaser(
     purchaser_id int auto_increment primary key,    -- ID（null）
@@ -82,35 +75,37 @@ create table purchaser(
     mail varchar(200) not null                      -- メールアドレス
 );
 
--- テーブル名　date_tbl
-create table date_tbl(
-    date_id int auto_increment primary key,    -- ID
-    date int not null                          -- 取りに行く時間
+-- テーブル名　details_tbl
+create table details_tbl(
+    details_id int auto_increment primary key,    -- ID
+    date int not null,                            -- 取りに行く時間
+    piece int not null                            -- 購入個数
+
 );
 
 -- テーブル名　food_reserve_tbl
 create table food_reserve_tbl(
     food_id int,                        -- フードメニューのID
     purchaser_id int,                   -- 購入者テーブルのID
-    date_id int,                        -- 受取時間テーブルのID
+    details_id int,                        -- 受取時間テーブルのID
     -- 複合キー
-    PRIMARY KEY(food_id, purchaser_id, date_id),
+    PRIMARY KEY(food_id, purchaser_id, details_id),
     -- 以下外部キー
     FOREIGN KEY (food_id) REFERENCES food_menu(food_id),
     FOREIGN KEY (purchaser_id) REFERENCES purchaser(purchaser_id),
-    FOREIGN KEY (date_id) REFERENCES date_tbl(date_id)
+    FOREIGN KEY (details_id) REFERENCES details_tbl(details_id)
 );
 
 -- テーブル名　drink_reserve_tbl
 create table drink_reserve_tbl(
     drink_id int,                       -- ドリンクメニューのID
     purchaser_id int,                   -- 購入者テーブルのID
-    date_id int,                        -- 受取時間テーブルのID
+    details_id int,                     -- 注文詳細テーブルのID
 
     -- 複合キー
-    PRIMARY KEY(drink_id, purchaser_id, date_id),
+    PRIMARY KEY(drink_id, purchaser_id, details_id),
     -- 以下外部キー
     FOREIGN KEY (drink_id) REFERENCES drink_menu(drink_id),
     FOREIGN KEY (purchaser_id) REFERENCES purchaser(purchaser_id),
-    FOREIGN KEY (date_id) REFERENCES date_tbl(date_id)
+    FOREIGN KEY (details_id) REFERENCES details_tbl(details_id)
 );
